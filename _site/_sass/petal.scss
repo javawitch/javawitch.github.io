@@ -1,0 +1,441 @@
+// ============================================================
+//  PETAL THEME — _sass/petal.scss
+//  A playful, lightweight Jekyll theme for GitHub Pages
+//  Accent: Millennial Pink  |  Flower: #FFF47F
+//  No external images. No heavy JS. Pure CSS magic.
+// ============================================================
+
+// ── TOKENS ──────────────────────────────────────────────────
+:root {
+  // Light mode (default)
+  --bg:           #ffffff;
+  --bg-subtle:    #fdf8f8;
+  --ink:          #111111;
+  --ink-muted:    #555555;
+  --ink-faint:    #999999;
+  --accent:       #f4a7b9;   // millennial pink
+  --accent-text:  #111111;
+  --flower:       #6EACDF;   // soft yellow for border flowers
+  --link:         #c0634f;
+  --border:       rgba(0,0,0,0.08);
+  --footer-bg:    #111111;
+  --footer-text:  #ffffff;
+
+  // Typography
+  --font-mono:    'Space Mono', 'Courier New', monospace;
+  --font-serif:   'DM Serif Display', Georgia, serif;
+
+  // Spacing
+  --strip-w:      26px;
+  --content-max:  680px;
+}
+
+[data-theme="dark"] {
+  --bg:           #1a1a1a;
+  --bg-subtle:    #222222;
+  --ink:          #f0f0f0;
+  --ink-muted:    #aaaaaa;
+  --ink-faint:    #666666;
+  --accent:       #f4a7b9;
+  --accent-text:  #111111;
+  --flower:       #FFF47F;
+  --link:         #f4a7b9;
+  --border:       rgba(255,255,255,0.08);
+  --footer-bg:    #0e0e0e;
+  --footer-text:  #f0f0f0;
+}
+
+// ── RESET ───────────────────────────────────────────────────
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-mono);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.75;
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+a:hover { text-decoration-thickness: 2.5px; }
+
+// ── LAYOUT ──────────────────────────────────────────────────
+.site-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+// ── BORDER STRIPS ───────────────────────────────────────────
+// Polka-dot pattern via two offset radial-gradients — no images
+.border-strip {
+  width: var(--strip-w);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle, var(--accent) 38%, transparent 38%) 0 0 / 10px 10px,
+    radial-gradient(circle, var(--accent) 38%, transparent 38%) 5px 5px / 10px 10px,
+    var(--bg);
+  transition: background 0.3s;
+}
+
+// Flowers injected via JS, styled here
+.border-strip .flower {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--flower);
+  pointer-events: none;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: var(--flower);
+  }
+
+  // horizontal petals
+  &::before {
+    width: 5px; height: 5px;
+    top: 1px; left: -5px;
+    box-shadow: 12px 0 0 var(--flower);
+  }
+
+  // vertical petals
+  &::after {
+    width: 5px; height: 5px;
+    top: -5px; left: 1px;
+    box-shadow: 0 12px 0 var(--flower);
+  }
+}
+
+// ── MAIN CONTENT ────────────────────────────────────────────
+.site-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+// ── HEADER / NAV ────────────────────────────────────────────
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;       // align logo + nav to bottom edge
+  padding: 1.25rem 1.75rem 0; // no bottom padding — nav border flush
+  border-bottom: 2px solid var(--accent);
+  transition: border-color 0.3s;
+}
+
+.site-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  padding-bottom: 0.6rem;     // optical align with tab baseline
+
+  &:hover { text-decoration: none; opacity: 0.85; }
+}
+
+// Hybrid C+D nav: underline tabs (C) + flower bullets (D), right-aligned
+// Active tab uses blue #6EACDF instead of pink for clear "you are here"
+.site-nav {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+
+  a {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.45rem 0.875rem;
+    color: var(--ink-muted);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;        // sit flush on the header border
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+
+    // flower bullet on every tab
+    &::before {
+      content: '✿';
+      font-size: 0.6rem;
+      color: var(--accent);
+      transition: color 0.2s;
+    }
+
+    &:hover {
+      color: var(--ink);
+      &::before { color: var(--accent); }
+    }
+
+    // active: blue underline + blue text + blue flower
+    &.active {
+      color: #6EACDF;
+      font-weight: 700;
+      border-bottom-color: #6EACDF;
+      &::before { color: #6EACDF; }
+    }
+  }
+}
+
+// ── SUBBAR ──────────────────────────────────────────────────
+.site-subbar {
+  background: var(--accent);
+  color: var(--accent-text);
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 0.45rem 1.75rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.3s;
+
+  a {
+    color: var(--accent-text);
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+
+  .divider { opacity: 0.5; }
+}
+
+// ── PAGE MAIN ───────────────────────────────────────────────
+.page-main {
+  flex: 1;
+  padding: 2rem 1.75rem;
+  max-width: var(--content-max);
+  width: 100%;
+  margin: 0 auto;
+}
+
+// ── POST / PAGE TYPOGRAPHY ──────────────────────────────────
+.post-header {
+  margin-bottom: 1.5rem;
+}
+
+.post-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+.post-meta {
+  font-size: 0.65rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.post-categories {
+  text-align: center;
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
+}
+
+.post-content {
+  p { margin-bottom: 0.9rem; font-size: 0.875rem; }
+  h2 { font-family: var(--font-serif); font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: var(--ink); }
+  h3 { font-family: var(--font-serif); font-size: 0.95rem; margin: 1.2rem 0 0.4rem; color: var(--ink); }
+  ol, ul { font-size: 0.8rem; line-height: 1.9; padding-left: 1.25rem; margin-bottom: 0.9rem; }
+  ul { list-style: circle; }
+  blockquote {
+    border-left: 3px solid var(--accent);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: var(--ink-muted);
+  }
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+    background: #fde8ee;
+    color: #c0634f;
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    border: 1px solid var(--accent);
+  }
+
+  // ── STYLE A CODE BLOCKS ─────────────────────────────────
+  // Pink left border + subtle tint. Matches blockquote rhythm.
+  // Rouge wraps fenced blocks in .highlight > pre > code
+  pre, .highlight {
+    background: #fdf5f7;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    font-size: 0.78rem;
+    line-height: 1.75;
+
+    code {
+      background: none;
+      border: none;
+      padding: 0;
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+
+  // Rouge syntax tokens — tied to the theme palette
+  .highlight {
+    .c, .cm, .c1, .cs { color: #aaaaaa; font-style: italic; }  // comments
+    .k, .kd, .kn, .kp, .kr, .kt { color: #c0634f; font-weight: 700; } // keywords → terracotta
+    .nf, .nx { color: #7a6800; }                // functions → dark yellow
+    .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx { color: #2a7a45; } // strings → green
+    .mi, .mf, .mh, .mo { color: #7040c0; }     // numbers → lavender
+    .na, .nb { color: #555555; }                // builtins
+    .o, .ow  { color: #c0634f; }                // operators
+    .p        { color: #888888; }               // punctuation
+  }
+
+  // Dark mode code block overrides
+  [data-theme="dark"] & pre,
+  [data-theme="dark"] & .highlight {
+    background: #221520;
+    border-left-color: var(--accent);
+
+    .c, .cm, .c1, .cs  { color: #666666; }
+    .k, .kd, .kn, .kp, .kr, .kt { color: #f4a7b9; }
+    .nf, .nx  { color: #FFF47F; }
+    .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx { color: #90d4a0; }
+    .mi, .mf, .mh, .mo { color: #c9a7f4; }
+    .na, .nb  { color: #aaaaaa; }
+    .o, .ow   { color: #f4a7b9; }
+    .p         { color: #666666; }
+  }
+  hr {
+    border: none;
+    text-align: center;
+    margin: 1.5rem 0;
+    &::after {
+      content: '✿ ✿ ✿';
+      color: var(--accent);
+      letter-spacing: 0.5em;
+      font-size: 0.75rem;
+    }
+  }
+  img { margin: 1.2rem auto; border-radius: 4px; }
+}
+
+// ── POST LIST (index page) ───────────────────────────────────
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+
+  time {
+    font-size: 0.65rem;
+    color: var(--ink-faint);
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+  }
+
+  a {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+    &:hover { color: var(--link); text-decoration: underline; }
+  }
+}
+
+// ── DARK MODE TOGGLE ────────────────────────────────────────
+.theme-toggle {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--bg);
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s, transform 0.2s;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+  &:hover { transform: scale(1.1); }
+}
+
+// ── FOOTER ──────────────────────────────────────────────────
+.site-footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 0.9rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  transition: background 0.3s;
+
+  .footer-accent { color: var(--accent); }
+}
+
+// ── RESPONSIVE ──────────────────────────────────────────────
+@media (max-width: 600px) {
+  :root { --strip-w: 14px; }
+
+  .site-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .site-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.5rem 1rem;
+  }
+
+  .post-list-item {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+// ── FADE-IN ──────────────────────────────────────────────────
+@media (prefers-reduced-motion: no-preference) {
+  .page-main {
+    animation: fadein 0.35s ease;
+  }
+  @keyframes fadein {
+    from { opacity: 0; transform: translateY(5px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
