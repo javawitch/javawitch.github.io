@@ -25,11 +25,11 @@
 
   // Typography
   --font-mono:    'Space Mono', 'Courier New', monospace;
-  --font-serif:   'DM Serif Display', Georgia, serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
 
   // Spacing
   --strip-w:      54px;      // wide enough to see full dot pattern
-  --content-max:  480px;     // centered content column
+  --content-max:  680px;     // centered content column
 }
 
 [data-theme="dark"] {
