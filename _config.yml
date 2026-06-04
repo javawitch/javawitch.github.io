@@ -22,15 +22,15 @@ nav:
     url:   https://github.com/javawitch
 
 # ── SUBBAR (optional) ───────────────────────────────────────
-subbar:
-  - title: Favorites
-    url:   /favorites/
-  - title: TIL
-    url:   /til/
-  - title: Zines
-    url:   /zines/
-  - title: RSS
-    url:   /feed.xml
+# subbar:
+#  - title: Favorites
+#    url:   /favorites/
+#  - title: TIL
+#    url:   /til/
+#  - title: Zines
+#    url:   /zines/
+#  - title: RSS
+#    url:   /feed.xml
 
 # ── JEKYLL SETTINGS ─────────────────────────────────────────
 permalink:    /:year/:month/:title/
