@@ -6,3 +6,5 @@ gem "jekyll-seo-tag"
 
 # GitHub Pages compatible
 # gem "github-pages", group: :jekyll_plugins
+
+gem "jekyll-sass-converter", "~> 3.1"
