@@ -37,6 +37,7 @@ bundle exec jekyll serve
 ├── assets/
 │   ├── css/style.scss   # Entry point (imports petal.scss)
 │   └── js/petal.js      # Dark mode toggle + flowers
+├── _drafts/             # For housing draft blog posts
 └── index.html           # Post list homepage
 ```
 
