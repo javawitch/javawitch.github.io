@@ -1,25 +1,123 @@
 ---
+layout: default
+title: Page not found
 permalink: /404.html
-layout: page
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
+<style>
+  .error-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 4rem 1.75rem 3rem;
+    gap: 0;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
+
+  /* Large 404 display number */
+  .error-404 {
+    font-family: var(--font-serif);
+    font-size: clamp(72px, 18vw, 120px);
     line-height: 1;
-    letter-spacing: -1px;
+    color: var(--accent);
+    letter-spacing: -0.04em;
+    margin-bottom: 0.25rem;
+    position: relative;
+  }
+
+  /* The middle zero gets a flower stamped inside it */
+  .error-404 .zero {
+    display: inline-block;
+    position: relative;
+  }
+
+  .error-404 .zero::after {
+    content: '✿';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.32em;
+    color: var(--flower);
+    line-height: 1;
+  }
+
+  .error-tagline {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+
+  .error-sub {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    line-height: 1.8;
+    max-width: 340px;
+    margin-bottom: 2rem;
+  }
+
+  .error-actions {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .error-btn {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.25rem;
+    text-decoration: none;
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+    background: var(--bg);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .error-btn::before {
+    content: '✿';
+    font-size: 0.7em;
+    color: var(--accent);
+  }
+
+  .error-btn:hover {
+    text-decoration: none;
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  .error-btn.primary {
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  .error-btn.primary::before {
+    color: var(--flower);
+  }
+
+  .error-btn.primary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-text);
   }
 </style>
 
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div class="error-hero">
+  <p class="error-404">4<span class="zero">0</span>4</p>
+  <p class="error-tagline">lost in the garden.</p>
+  <p class="error-sub">
+    This page wandered off and we can&rsquo;t find it anywhere.
+    Maybe it&rsquo;s hiding behind a flower?
+  </p>
+  <div class="error-actions">
+    <a class="error-btn primary" href="{{ '/' | relative_url }}">← go home</a>
+    <a class="error-btn" href="{{ '/archive/' | relative_url }}">all posts</a>
+  </div>
 </div>

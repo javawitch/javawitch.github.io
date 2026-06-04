@@ -33,6 +33,10 @@ github_username:  javawitch
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+
+# For using remote themes on Github for Github Pages
+remote_theme: javawitch/jekyll-petal-theme@latest
 
 # Exclude from processing.
 # The following items will not be processed, by default.
