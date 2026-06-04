@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <article>
   <header class="post-header">
     {% if page.categories %}
@@ -23,4 +22,12 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
+
+  {% if page.tags %}
+  <div class="post-tags">
+    {% for tag in page.tags %}
+      <span class="post-tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
 </article>

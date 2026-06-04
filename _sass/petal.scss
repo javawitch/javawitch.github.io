@@ -10,6 +10,7 @@
   // Light mode (default)
   --bg:           #ffffff;
   --bg-subtle:    #fdf8f8;
+  --bg-strip:     #fce8ef;   // light pink tint behind polka dots
   --ink:          #111111;
   --ink-muted:    #555555;
   --ink-faint:    #999999;
@@ -17,6 +18,7 @@
   --accent-text:  #111111;
   --flower:       #FFF47F;   // soft yellow for border flowers
   --link:         #c0634f;
+  --heading:      #3d7eaa;   // accessible blue for titles (4.6:1 on white)
   --border:       rgba(0,0,0,0.08);
   --footer-bg:    #111111;
   --footer-text:  #ffffff;
@@ -26,13 +28,14 @@
   --font-serif:   'DM Serif Display', Georgia, serif;
 
   // Spacing
-  --strip-w:      26px;
-  --content-max:  680px;
+  --strip-w:      54px;      // wide enough to see full dot pattern
+  --content-max:  480px;     // centered content column
 }
 
 [data-theme="dark"] {
   --bg:           #1a1a1a;
   --bg-subtle:    #222222;
+  --bg-strip:     #2a1520;   // deep dark rose behind polka dots
   --ink:          #f0f0f0;
   --ink-muted:    #aaaaaa;
   --ink-faint:    #666666;
@@ -40,6 +43,7 @@
   --accent-text:  #111111;
   --flower:       #FFF47F;
   --link:         #f4a7b9;
+  --heading:      #6EACDF;   // lighter blue fine on dark bg (#1a1a1a = 4.7:1)
   --border:       rgba(255,255,255,0.08);
   --footer-bg:    #0e0e0e;
   --footer-text:  #f0f0f0;
@@ -52,7 +56,7 @@ html { font-size: 16px; -webkit-text-size-adjust: 100%; }
 
 body {
   font-family: var(--font-mono);
-  background: var(--bg);
+  background: var(--bg-strip);  // strip color fills the outer page
   color: var(--ink);
   line-height: 1.75;
   transition: background 0.3s, color 0.3s;
@@ -69,10 +73,22 @@ a:hover { text-decoration-thickness: 2.5px; }
 .site-wrapper {
   display: flex;
   flex: 1;
+  justify-content: center;
+}
+
+// ── MAIN CONTENT ────────────────────────────────────────────
+.site-content {
+  flex: 0 0 var(--content-max);
+  width: var(--content-max);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  transition: background 0.3s;
 }
 
 // ── BORDER STRIPS ───────────────────────────────────────────
-// Polka-dot pattern via two offset radial-gradients — no images
+// Solid coordinated bg + polka dot pattern layered on top
 .border-strip {
   width: var(--strip-w);
   flex-shrink: 0;
@@ -81,7 +97,7 @@ a:hover { text-decoration-thickness: 2.5px; }
   background:
     radial-gradient(circle, var(--accent) 38%, transparent 38%) 0 0 / 10px 10px,
     radial-gradient(circle, var(--accent) 38%, transparent 38%) 5px 5px / 10px 10px,
-    var(--bg);
+    var(--bg-strip);           // solid tinted bg — not page white/dark
   transition: background 0.3s;
 }
 
@@ -117,14 +133,6 @@ a:hover { text-decoration-thickness: 2.5px; }
     top: -5px; left: 1px;
     box-shadow: 0 12px 0 var(--flower);
   }
-}
-
-// ── MAIN CONTENT ────────────────────────────────────────────
-.site-content {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 // ── HEADER / NAV ────────────────────────────────────────────
@@ -265,9 +273,7 @@ a:hover { text-decoration-thickness: 2.5px; }
 .page-main {
   flex: 1;
   padding: 2rem 1.75rem;
-  max-width: var(--content-max);
   width: 100%;
-  margin: 0 auto;
 }
 
 // ── POST / PAGE TYPOGRAPHY ──────────────────────────────────
@@ -279,7 +285,7 @@ a:hover { text-decoration-thickness: 2.5px; }
   font-family: var(--font-serif);
   font-size: 1.6rem;
   line-height: 1.15;
-  color: var(--ink);
+  color: var(--heading);
   margin-bottom: 0.4rem;
 }
 
@@ -301,8 +307,8 @@ a:hover { text-decoration-thickness: 2.5px; }
 
 .post-content {
   p { margin-bottom: 0.9rem; font-size: 0.875rem; }
-  h2 { font-family: var(--font-serif); font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: var(--ink); }
-  h3 { font-family: var(--font-serif); font-size: 0.95rem; margin: 1.2rem 0 0.4rem; color: var(--ink); }
+  h2 { font-family: var(--font-serif); font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: var(--heading); }
+  h3 { font-family: var(--font-serif); font-size: 0.95rem; margin: 1.2rem 0 0.4rem; color: var(--heading); }
   ol, ul { font-size: 0.8rem; line-height: 1.9; padding-left: 1.25rem; margin-bottom: 0.9rem; }
   ul { list-style: circle; }
   blockquote {
@@ -385,6 +391,71 @@ a:hover { text-decoration-thickness: 2.5px; }
   img { margin: 1.2rem auto; border-radius: 4px; }
 }
 
+.post-list-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: var(--heading);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.25rem;
+  &:hover { text-decoration: underline; text-underline-offset: 3px; }
+}
+
+.post-date {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.post-excerpt {
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+  p { margin: 0; }
+}
+
+.read-more {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  &::after { content: '→'; font-size: 0.7rem; }
+  &:hover { text-decoration: underline; text-underline-offset: 2px; }
+}
+
+// ── POST TAGS ───────────────────────────────────────────────
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.post-tag {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  transition: background 0.15s, color 0.15s;
+
+  &:hover {
+    background: var(--accent);
+    color: var(--accent-text);
+  }
+}
+
 // ── POST LIST (index page) ───────────────────────────────────
 .post-list {
   list-style: none;
@@ -392,27 +463,11 @@ a:hover { text-decoration-thickness: 2.5px; }
 }
 
 .post-list-item {
-  padding: 1rem 0;
+  padding: 1.1rem 0;
   border-bottom: 1px solid var(--border);
   display: flex;
-  gap: 1rem;
-  align-items: baseline;
-
-  time {
-    font-size: 0.65rem;
-    color: var(--ink-faint);
-    white-space: nowrap;
-    letter-spacing: 0.04em;
-    flex-shrink: 0;
-  }
-
-  a {
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--ink);
-    text-decoration: none;
-    &:hover { color: var(--link); text-decoration: underline; }
-  }
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
 

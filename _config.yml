@@ -45,11 +45,22 @@ kramdown:
 compress_html:
   clippings: all
 
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
 # Implictly adding Sass here. **MUST USE @IMPORT BECAUSE OF GITHUB PAGES**
 sass:
   load_paths:
     - _sass
   style: compressed
+
+  # Adding a Collections block so posts can actually show
+  collections:
+  posts:
+    output: true
+
+excerpt_separator: "<!--more-->"
 
 # Exclude dev files from build
 exclude:
