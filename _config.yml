@@ -45,6 +45,12 @@ kramdown:
 compress_html:
   clippings: all
 
+# Implictly adding Sass here. **MUST USE @IMPORT BECAUSE OF GITHUB PAGES**
+sass:
+  load_paths:
+    - _sass
+  style: compressed
+
 # Exclude dev files from build
 exclude:
   - README.md

@@ -131,9 +131,9 @@ a:hover { text-decoration-thickness: 2.5px; }
 .site-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 1.25rem 1.75rem 1rem;
-  border-bottom: 3px solid var(--accent);
+  align-items: flex-end;
+  padding: 1.25rem 1.75rem 0;
+  border-bottom: 2px solid var(--accent);
   transition: border-color 0.3s;
 }
 
@@ -144,26 +144,97 @@ a:hover { text-decoration-thickness: 2.5px; }
   text-decoration: none;
   letter-spacing: -0.03em;
   line-height: 1;
+  padding-bottom: 0.6rem;
 
   &:hover { text-decoration: none; opacity: 0.85; }
 }
 
+// Wrapper holds nav links + divider + toggle all bottom-aligned
+.site-nav-wrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+}
+
+// Hybrid C+D nav: underline tabs + flower bullets, right-aligned
+// Active tab: #6EACDF blue
 .site-nav {
   display: flex;
-  flex-direction: column;
   align-items: flex-end;
-  gap: 0.2rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  gap: 0;
 
   a {
-    color: var(--ink);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     text-decoration: none;
+    padding: 0.45rem 0.875rem;
+    color: var(--ink-muted);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     transition: color 0.2s;
 
-    &:hover { color: var(--accent); }
-    &.active { color: var(--accent); border-bottom: 1.5px solid var(--accent); }
+    &::before {
+      content: '✿';
+      font-size: 0.6rem;
+      color: var(--accent);
+      transition: color 0.2s;
+    }
+
+    &:hover { color: var(--ink); }
+
+    &.active {
+      color: #6EACDF;
+      font-weight: 700;
+      border-bottom-color: #6EACDF;
+      &::before { color: #6EACDF; }
+    }
+  }
+}
+
+// Thin divider between nav links and toggle
+.nav-divider {
+  width: 1px;
+  height: 16px;
+  background: var(--border);
+  margin: 0 0.5rem 0.6rem;
+  flex-shrink: 0;
+}
+
+// ── THEME TOGGLE — pill with dot (Option C) ──────────────────
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 0.55rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  transition: border-color 0.2s;
+
+  &:hover { border-color: var(--accent); }
+
+  .toggle-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+
+  .toggle-txt {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    transition: color 0.2s;
   }
 }
 
@@ -244,17 +315,61 @@ a:hover { text-decoration-thickness: 2.5px; }
   code {
     font-family: var(--font-mono);
     font-size: 0.8em;
-    background: var(--bg-subtle);
-    padding: 0.1em 0.35em;
-    border-radius: 3px;
+    background: #fde8ee;
+    color: #c0634f;
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    border: 1px solid var(--accent);
   }
-  pre {
-    background: var(--bg-subtle);
-    padding: 1rem;
+
+  // ── STYLE A CODE BLOCKS ─────────────────────────────────
+  // Pink left border + subtle tint. Matches blockquote rhythm.
+  // Rouge wraps fenced blocks in .highlight > pre > code
+  pre, .highlight {
+    background: #fdf5f7;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 1rem 1.25rem;
     overflow-x: auto;
     margin-bottom: 1rem;
-    border-left: 3px solid var(--accent);
-    code { background: none; padding: 0; }
+    font-size: 0.78rem;
+    line-height: 1.75;
+
+    code {
+      background: none;
+      border: none;
+      padding: 0;
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+
+  // Rouge syntax tokens — tied to the theme palette
+  .highlight {
+    .c, .cm, .c1, .cs { color: #aaaaaa; font-style: italic; }  // comments
+    .k, .kd, .kn, .kp, .kr, .kt { color: #c0634f; font-weight: 700; } // keywords → terracotta
+    .nf, .nx { color: #7a6800; }                // functions → dark yellow
+    .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx { color: #2a7a45; } // strings → green
+    .mi, .mf, .mh, .mo { color: #7040c0; }     // numbers → lavender
+    .na, .nb { color: #555555; }                // builtins
+    .o, .ow  { color: #c0634f; }                // operators
+    .p        { color: #888888; }               // punctuation
+  }
+
+  // Dark mode code block overrides
+  [data-theme="dark"] & pre,
+  [data-theme="dark"] & .highlight {
+    background: #221520;
+    border-left-color: var(--accent);
+
+    .c, .cm, .c1, .cs  { color: #666666; }
+    .k, .kd, .kn, .kp, .kr, .kt { color: #f4a7b9; }
+    .nf, .nx  { color: #FFF47F; }
+    .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx { color: #90d4a0; }
+    .mi, .mf, .mh, .mo { color: #c9a7f4; }
+    .na, .nb  { color: #aaaaaa; }
+    .o, .ow   { color: #f4a7b9; }
+    .p         { color: #666666; }
   }
   hr {
     border: none;
@@ -300,27 +415,7 @@ a:hover { text-decoration-thickness: 2.5px; }
   }
 }
 
-// ── DARK MODE TOGGLE ────────────────────────────────────────
-.theme-toggle {
-  position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
-  border: 2px solid var(--accent);
-  background: var(--bg);
-  cursor: pointer;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.25s, transform 0.2s;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 
-  &:hover { transform: scale(1.1); }
-}
 
 // ── FOOTER ──────────────────────────────────────────────────
 .site-footer {
@@ -344,14 +439,21 @@ a:hover { text-decoration-thickness: 2.5px; }
   .site-header {
     flex-direction: column;
     gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .site-nav-wrap {
+    flex-wrap: wrap;
+    gap: 0.25rem;
   }
 
   .site-nav {
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 0.5rem 1rem;
   }
+
+  .nav-divider { display: none; }
+
+  .theme-toggle { margin-bottom: 0.4rem; }
 
   .post-list-item {
     flex-direction: column;

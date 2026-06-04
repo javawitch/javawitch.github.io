@@ -9,8 +9,8 @@
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    var btn = document.getElementById('theme-toggle');
-    if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    var txt = document.querySelector('.toggle-txt');
+    if (txt) txt.textContent = theme === 'dark' ? 'dark' : 'light';
     localStorage.setItem(STORAGE_KEY, theme);
   }
 
@@ -30,7 +30,6 @@
     var strips = document.querySelectorAll('.border-strip');
     strips.forEach(function (strip) {
       var height = strip.offsetHeight;
-      // space flowers every 55px, start 32px from top
       for (var y = 32; y < height - 20; y += 55) {
         var flower = document.createElement('div');
         flower.className = 'flower';

@@ -1,13 +1,20 @@
 <header class="site-header">
   <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-  <nav class="site-nav" aria-label="Main navigation">
-    {% for item in site.nav %}
-      <a href="{{ item.url | relative_url }}"
-         {% if page.url == item.url %}class="active" aria-current="page"{% endif %}>
-        {{ item.title }}
-      </a>
-    {% endfor %}
-  </nav>
+  <div class="site-nav-wrap">
+    <nav class="site-nav" aria-label="Main navigation">
+      {% for item in site.nav %}
+        <a href="{{ item.url | relative_url }}"
+           {% if page.url == item.url %}class="active" aria-current="page"{% endif %}>
+          {{ item.title }}
+        </a>
+      {% endfor %}
+    </nav>
+    <div class="nav-divider" aria-hidden="true"></div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+      <div class="toggle-dot"></div>
+      <span class="toggle-txt">light</span>
+    </button>
+  </div>
 </header>
 
 {% if site.subbar %}
