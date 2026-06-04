@@ -1,98 +1,211 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en" data-theme="light">
+<head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Your awesome title | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
-<meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Your awesome title" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/404.html" />
-<meta property="og:url" content="http://localhost:4000/404.html" />
-<meta property="og:site_name" content="Your awesome title" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Your awesome title" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Your awesome title","url":"http://localhost:4000/404.html"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
-<body><header class="site-header" role="banner">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Staff Software Engineer and lover of all things cute, dainty, and adorablycreepy.">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+<title>Page not found &mdash; Jocelyn Harper</title>
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
-      </nav></div>
+<!-- Emoji favicon — zero requests -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+
+<!-- Theme: apply before paint to avoid flash -->
+<script>
+  (function(){
+    var t=localStorage.getItem('petal-theme');
+    var p=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+    document.documentElement.setAttribute('data-theme',t||p);
+  })();
+</script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+
+  <header class="site-header">
+  <a class="site-title" href="/">Jocelyn Harper</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    
+      <a href="/about/"
+         >
+        About
+      </a>
+    
+      <a href="/projects/"
+         >
+        Projects
+      </a>
+    
+      <a href="/"
+         >
+        Writing
+      </a>
+    
+      <a href="https://github.com/javawitch"
+         >
+        GitHub
+      </a>
+    
+  </nav>
 </header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title"></h1>
-  </header>
 
-  <div class="post-content">
-    <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
+<div class="site-subbar" aria-label="Secondary navigation">
+  
+    <a href="/favorites/">Favorites</a>
+    <span class="divider">✿</span>
+  
+    <a href="/til/">TIL</a>
+    <span class="divider">✿</span>
+  
+    <a href="/zines/">Zines</a>
+    <span class="divider">✿</span>
+  
+    <a href="/feed.xml">RSS</a>
+    
+  
+</div>
+
+
+
+  <div class="site-wrapper">
+    <div class="border-strip" aria-hidden="true"></div>
+
+    <div class="site-content">
+      <main class="page-main" id="main-content">
+        <style>
+  .error-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 4rem 1.75rem 3rem;
+    gap: 0;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
+
+  /* Large 404 display number */
+  .error-404 {
+    font-family: var(--font-serif);
+    font-size: clamp(72px, 18vw, 120px);
     line-height: 1;
-    letter-spacing: -1px;
+    color: var(--accent);
+    letter-spacing: -0.04em;
+    margin-bottom: 0.25rem;
+    position: relative;
+  }
+
+  /* The middle zero gets a flower stamped inside it */
+  .error-404 .zero {
+    display: inline-block;
+    position: relative;
+  }
+
+  .error-404 .zero::after {
+    content: '✿';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.32em;
+    color: var(--flower);
+    line-height: 1;
+  }
+
+  .error-tagline {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+
+  .error-sub {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    line-height: 1.8;
+    max-width: 340px;
+    margin-bottom: 2rem;
+  }
+
+  .error-actions {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .error-btn {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.25rem;
+    text-decoration: none;
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+    background: var(--bg);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .error-btn::before {
+    content: '✿';
+    font-size: 0.7em;
+    color: var(--accent);
+  }
+
+  .error-btn:hover {
+    text-decoration: none;
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  .error-btn.primary {
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  .error-btn.primary::before {
+    color: var(--flower);
+  }
+
+  .error-btn.primary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-text);
   }
 </style>
 
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
-
+<div class="error-hero">
+  <p class="error-404">4<span class="zero">0</span>4</p>
+  <p class="error-tagline">lost in the garden.</p>
+  <p class="error-sub">
+    This page wandered off and we can&rsquo;t find it anywhere.
+    Maybe it&rsquo;s hiding behind a flower?
+  </p>
+  <div class="error-actions">
+    <a class="error-btn primary" href="/">← go home</a>
+    <a class="error-btn" href="/archive/">all posts</a>
   </div>
-
-</article>
-
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">Your awesome title</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
-      </div>
-
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/javawitch"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">javawitch</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
 </div>
 
-      <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
-      </div>
+      </main>
+
+      <footer class="site-footer">
+        <span class="footer-accent">http://localhost:4000</span>
+        <span>made with ♥ &amp; jekyll</span>
+      </footer>
     </div>
 
+    <div class="border-strip" aria-hidden="true"></div>
   </div>
 
-</footer>
-</body>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
 
+  <script src="/assets/js/petal.js"></script>
+</body>
 </html>

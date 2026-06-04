@@ -1,15 +1,104 @@
----
-layout: default
-title: Blog
----
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Staff Software Engineer and lover of all things cute, dainty, and adorablycreepy.">
 
-<ul class="post-list">
-  {% for post in site.posts %}
+<title>Writing &mdash; Jocelyn Harper</title>
+
+<!-- Emoji favicon — zero requests -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+
+<!-- Theme: apply before paint to avoid flash -->
+<script>
+  (function(){
+    var t=localStorage.getItem('petal-theme');
+    var p=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+    document.documentElement.setAttribute('data-theme',t||p);
+  })();
+</script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+
+  <header class="site-header">
+  <a class="site-title" href="/">Jocelyn Harper</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    
+      <a href="/about/"
+         >
+        About
+      </a>
+    
+      <a href="/projects/"
+         >
+        Projects
+      </a>
+    
+      <a href="/"
+         class="active" aria-current="page">
+        Writing
+      </a>
+    
+      <a href="https://github.com/javawitch"
+         >
+        GitHub
+      </a>
+    
+  </nav>
+</header>
+
+
+<div class="site-subbar" aria-label="Secondary navigation">
+  
+    <a href="/favorites/">Favorites</a>
+    <span class="divider">✿</span>
+  
+    <a href="/til/">TIL</a>
+    <span class="divider">✿</span>
+  
+    <a href="/zines/">Zines</a>
+    <span class="divider">✿</span>
+  
+    <a href="/feed.xml">RSS</a>
+    
+  
+</div>
+
+
+
+  <div class="site-wrapper">
+    <div class="border-strip" aria-hidden="true"></div>
+
+    <div class="site-content">
+      <main class="page-main" id="main-content">
+        <ul class="post-list">
+  
   <li class="post-list-item">
-    <time datetime="{{ post.date | date_to_xmlschema }}">
-      {{ post.date | date: "%b %-d, %Y" }}
+    <time datetime="2026-06-02T21:37:58-04:00">
+      Jun 2, 2026
     </time>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <a href="/2026/06/welcome-to-jekyll/">Welcome to Jekyll!</a>
   </li>
-  {% endfor %}
+  
 </ul>
+
+      </main>
+
+      <footer class="site-footer">
+        <span class="footer-accent">http://localhost:4000</span>
+        <span>made with ♥ &amp; jekyll</span>
+      </footer>
+    </div>
+
+    <div class="border-strip" aria-hidden="true"></div>
+  </div>
+
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+  <script src="/assets/js/petal.js"></script>
+</body>
+</html>

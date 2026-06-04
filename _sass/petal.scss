@@ -15,7 +15,7 @@
   --ink-faint:    #999999;
   --accent:       #f4a7b9;   // millennial pink
   --accent-text:  #111111;
-  --flower:       #6EACDF;   // soft yellow for border flowers
+  --flower:       #FFF47F;   // soft yellow for border flowers
   --link:         #c0634f;
   --border:       rgba(0,0,0,0.08);
   --footer-bg:    #111111;
@@ -131,9 +131,9 @@ a:hover { text-decoration-thickness: 2.5px; }
 .site-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;       // align logo + nav to bottom edge
-  padding: 1.25rem 1.75rem 0; // no bottom padding — nav border flush
-  border-bottom: 2px solid var(--accent);
+  align-items: flex-start;
+  padding: 1.25rem 1.75rem 1rem;
+  border-bottom: 3px solid var(--accent);
   transition: border-color 0.3s;
 }
 
@@ -144,52 +144,26 @@ a:hover { text-decoration-thickness: 2.5px; }
   text-decoration: none;
   letter-spacing: -0.03em;
   line-height: 1;
-  padding-bottom: 0.6rem;     // optical align with tab baseline
 
   &:hover { text-decoration: none; opacity: 0.85; }
 }
 
-// Hybrid C+D nav: underline tabs (C) + flower bullets (D), right-aligned
-// Active tab uses blue #6EACDF instead of pink for clear "you are here"
 .site-nav {
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
-  gap: 0;
+  gap: 0.2rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 
   a {
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    color: var(--ink);
     text-decoration: none;
-    padding: 0.45rem 0.875rem;
-    color: var(--ink-muted);
-    border-bottom: 2px solid transparent;
-    margin-bottom: -2px;        // sit flush on the header border
-    display: flex;
-    align-items: center;
-    gap: 5px;
     transition: color 0.2s;
 
-    // flower bullet on every tab
-    &::before {
-      content: '✿';
-      font-size: 0.6rem;
-      color: var(--accent);
-      transition: color 0.2s;
-    }
-
-    &:hover {
-      color: var(--ink);
-      &::before { color: var(--accent); }
-    }
-
-    // active: blue underline + blue text + blue flower
-    &.active {
-      color: #6EACDF;
-      font-weight: 700;
-      border-bottom-color: #6EACDF;
-      &::before { color: #6EACDF; }
-    }
+    &:hover { color: var(--accent); }
+    &.active { color: var(--accent); border-bottom: 1.5px solid var(--accent); }
   }
 }
 
@@ -270,61 +244,17 @@ a:hover { text-decoration-thickness: 2.5px; }
   code {
     font-family: var(--font-mono);
     font-size: 0.8em;
-    background: #fde8ee;
-    color: #c0634f;
-    padding: 0.15em 0.4em;
-    border-radius: 4px;
-    border: 1px solid var(--accent);
+    background: var(--bg-subtle);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
   }
-
-  // ── STYLE A CODE BLOCKS ─────────────────────────────────
-  // Pink left border + subtle tint. Matches blockquote rhythm.
-  // Rouge wraps fenced blocks in .highlight > pre > code
-  pre, .highlight {
-    background: #fdf5f7;
-    border-left: 3px solid var(--accent);
-    border-radius: 0 6px 6px 0;
-    padding: 1rem 1.25rem;
+  pre {
+    background: var(--bg-subtle);
+    padding: 1rem;
     overflow-x: auto;
     margin-bottom: 1rem;
-    font-size: 0.78rem;
-    line-height: 1.75;
-
-    code {
-      background: none;
-      border: none;
-      padding: 0;
-      color: inherit;
-      font-size: inherit;
-    }
-  }
-
-  // Rouge syntax tokens — tied to the theme palette
-  .highlight {
-    .c, .cm, .c1, .cs { color: #aaaaaa; font-style: italic; }  // comments
-    .k, .kd, .kn, .kp, .kr, .kt { color: #c0634f; font-weight: 700; } // keywords → terracotta
-    .nf, .nx { color: #7a6800; }                // functions → dark yellow
-    .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx { color: #2a7a45; } // strings → green
-    .mi, .mf, .mh, .mo { color: #7040c0; }     // numbers → lavender
-    .na, .nb { color: #555555; }                // builtins
-    .o, .ow  { color: #c0634f; }                // operators
-    .p        { color: #888888; }               // punctuation
-  }
-
-  // Dark mode code block overrides
-  [data-theme="dark"] & pre,
-  [data-theme="dark"] & .highlight {
-    background: #221520;
-    border-left-color: var(--accent);
-
-    .c, .cm, .c1, .cs  { color: #666666; }
-    .k, .kd, .kn, .kp, .kr, .kt { color: #f4a7b9; }
-    .nf, .nx  { color: #FFF47F; }
-    .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx { color: #90d4a0; }
-    .mi, .mf, .mh, .mo { color: #c9a7f4; }
-    .na, .nb  { color: #aaaaaa; }
-    .o, .ow   { color: #f4a7b9; }
-    .p         { color: #666666; }
+    border-left: 3px solid var(--accent);
+    code { background: none; padding: 0; }
   }
   hr {
     border: none;
