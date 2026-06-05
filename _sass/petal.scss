@@ -159,6 +159,13 @@ a:hover { text-decoration-thickness: 2.5px; }
   b {
     color: var(--accent);
   }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    &:hover { text-decoration-thickness: 2px; }
+  }
 }
 
 // ── HEADER / NAV ────────────────────────────────────────────
