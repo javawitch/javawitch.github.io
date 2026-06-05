@@ -7,9 +7,7 @@ categories: blog
 ---
 _This blog was originally posted on [Medium](https://medium.com/@javavvitch/my-time-as-a-black-woman-software-engineer-at-capital-one-5c05fa8faed), July 6, 2020._ 
 
-
 **Trigger Warning: Mention onf depression, anxiety, PTSD, and suicidal thoughts.** 
-
 
 Being a Black woman in technology, despite the immense amount of privilege that we have with our skill set and our compensation for said skill set, is hard, but I would like to think I have persevered despite the odds. I love my career path. I travel to conferences to talk about my experience technically and also to talk about my experience with diversity and inclusion in the field. Honestly, this article could have been another talk and a hell of a good one. I have also found ways to grow a community of compassionate friends in technology that I did not think was possible. Yet, when it came to my job, I was dimmed.
 <!--more-->
