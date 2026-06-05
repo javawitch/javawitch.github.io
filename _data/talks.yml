@@ -23,7 +23,7 @@
   location: Philadelphia, PA
   date: Oct 2019
   abstract_text: "Too often as technologists, we want to align ourselves with the apolitical when it comes to the products that we diligently work on. Over the past few years, and more so over the past couple of months, it is more evident than ever that the choices that the companies we work for and efforts that we support directly impact our society for decades to come in significant ways. With great power, comes great responsibility, and with great responsibility comes the hard reality that we’re not just writing code and never were. With brief looks into Girl Develop It, npm Registry, Chef, and more, we will look at the historical context of these organizations and how by ignoring these apolitical stances we are feeding back into the cycle."
-  abstract: https://devopsdays.org/events/2019-philadelphia/speakers/jocelyn-harper
+  conference: https://devopsdays.org/events/2019-philadelphia/speakers/jocelyn-harper
   slides: https://slides.com/jocelynharper/constantly-ignore-constantly-deflecting/
   video: https://www.youtube.com/watch?v=bBfHIu3zsos
 
@@ -49,7 +49,7 @@
   location: Wilmington, DE
   date: Nov 2018
   panel: true
-  abstract: https://dewitd.tappwebsites.com/blog/portfolio-item/jocelyn-harper/
+  conference: https://dewitd.tappwebsites.com/blog/portfolio-item/jocelyn-harper/
 
 - title: "Open Source: Diversifying the Initiative"
   event: Comcast's Open Source Day
@@ -62,14 +62,14 @@
   location: New York, NY
   date: Jun 2018
   panel: true
-  abstract: https://www.mongodb.com/world18/session/173508
+  conference: https://www.mongodb.com/world18/session/173508
 
 - title: "DevOps: Automated Performance Management"
   event: Women in Tech Summit Northeast
   location: Philadelphia, PA
   date: Apr 2018
   slides: http://speakerdeck.com/jocelynharper/devops-automated-performance-management
-  abstract: https://bit.ly/2vBAUkd
+  conference: https://bit.ly/2vBAUkd
   panel: true
 
 - title: "Speaker"
@@ -83,11 +83,11 @@
   location: Delaware
   date: Apr 2017
   panel: true
-  abstract: https://technical.ly/delaware/2017/04/04/jocelyn-harper-pipeline-diversity/
+  conference: https://technical.ly/delaware/2017/04/04/jocelyn-harper-pipeline-diversity/
 
 - title: "Panelist"
   event: Delaware Innovation Week
   location: Delaware
   date: Nov 2016
   panel: true
-  abstract: https://technical.ly/delaware/2016/11/16/shilpa-jindal-capital-one/
+  conference: https://technical.ly/delaware/2016/11/16/shilpa-jindal-capital-one/
