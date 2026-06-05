@@ -31,6 +31,11 @@ title: Speaking
         {% if talk.video %}<a class="talk-link primary" href="{{ talk.video }}">Video</a>{% endif %}
         {% if talk.abstract %}<a class="talk-link" href="{{ talk.abstract }}">Abstract</a>{% endif %}
       </div>
+      <div class="talk-abstract">
+        {% if talk.abstract_text %}
+      <p class="talk-abstract-body">{{ talk.abstract_text }}</p>
+      {% endif %}
+      </div>
       {% endif %}
       {% if talk.slides or talk.video %}<span class="talk-arrow" aria-hidden="true">→</span>{% endif %}
     </li>

@@ -1047,6 +1047,50 @@ a:hover { text-decoration-thickness: 2.5px; }
   align-self: center;
 }
 
+.talk-abstract {
+  grid-column: 1;
+  margin-top: 0.4rem;
+}
+
+.talk-abstract {
+  grid-column: 1 / -1;
+  margin-top: 0.4rem;
+}
+
+.talk-abstract-toggle {
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--accent-text);
+  user-select: none;
+
+  &::-webkit-details-marker { display: none; }
+  &::after { content: ' ↓'; }
+}
+
+.talk-abstract[open] .talk-abstract-toggle {
+  &::after { content: ' ↑'; }
+}
+
+.talk-abstract-body {
+  grid-column: 1;
+  margin-top: 0.5rem;
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+  line-height: 1.75;
+  padding: 0.6rem 0.75rem;
+  border-left: 3px solid var(--accent);
+  background: var(--bg-strip);
+}
+
 // ── PODCASTS ────────────────────────────────────────────────
 .podcast-list { list-style: none; padding: 0; }
 
