@@ -1,4 +1,101 @@
 ---
 layout: default
 title: About
+looking: true
 ---
+
+<div class="about-hero">
+  <div class="about-avatar">JH</div>
+  <div class="hero-text">
+    <div class="hero-name-row">
+      <h1 class="hero-name">{{ site.title }}</h1>
+      {% if page.looking %}
+      <span class="avail-flag looking">
+        <span class="avail-dot"></span>
+        Open to work
+      </span>
+      {% else %}
+      <span class="avail-flag not-looking">
+        <span class="avail-dot"></span>
+        Not looking
+      </span>
+      {% endif %}
+    </div>
+    <p class="hero-role">Staff Software Engineer</p>
+    <p class="hero-bio">I build systems that scale, teams that thrive, and occasionally, very cute Jekyll themes. 10+ years turning gnarly technical problems into clean, maintainable solutions.</p>
+    <div class="contact-row">
+      <a class="contact-link" href="https://github.com/javawitch">GitHub</a>
+      <a class="contact-link" href="https://linkedin.com/in/yourhandle">LinkedIn</a>
+      <a class="contact-link" href="/assets/resume.pdf">Resume ↓</a>
+      <a class="contact-link" href="mailto:hello@jocelyn.dev">hello@jocelyn.dev</a>
+    </div>
+  </div>
+</div>
+
+<div class="about-section">
+  <div class="section-head"><h2>Technical skills</h2><div class="section-line"></div></div>
+  <div class="skills-grid">
+    <span class="skill skill--lang">TypeScript</span>
+    <span class="skill skill--lang">React</span>
+    <span class="skill skill--lang">Node.js</span>
+    <span class="skill skill--lang">Python</span>
+    <span class="skill skill--lang">Go</span>
+    <span class="skill skill--lang">GraphQL</span>
+    <span class="skill skill--arch">System Design</span>
+    <span class="skill skill--arch">Distributed Systems</span>
+    <span class="skill skill--arch">API Design</span>
+    <span class="skill skill--arch">Performance</span>
+    <span class="skill skill--infra">AWS</span>
+    <span class="skill skill--infra">Kubernetes</span>
+    <span class="skill skill--infra">Terraform</span>
+    <span class="skill skill--infra">PostgreSQL</span>
+  </div>
+</div>
+
+<div class="about-section">
+  <div class="section-head"><h2>How I work</h2><div class="section-line"></div></div>
+  <div class="values-grid">
+    <div class="value-card">
+      <p class="value-label">Technical depth</p>
+      <p class="value-text">I care about understanding systems fully — not just making them work but knowing why they work.</p>
+    </div>
+    <div class="value-card">
+      <p class="value-label">People first</p>
+      <p class="value-text">The best code I've shipped came from teams where everyone felt safe to say "I don't know."</p>
+    </div>
+    <div class="value-card">
+      <p class="value-label">Clear writing</p>
+      <p class="value-text">RFCs, ADRs, post-mortems — I believe written communication is a core engineering skill.</p>
+    </div>
+    <div class="value-card">
+      <p class="value-label">Long-term thinking</p>
+      <p class="value-text">Optimizing for the team that inherits this code in two years, not just the deadline next week.</p>
+    </div>
+  </div>
+</div>
+
+<div class="about-section">
+  <div class="section-head"><h2>Currently</h2><div class="section-line"></div></div>
+  <div class="currently-list">
+    <div class="currently-item">
+      <span class="currently-dot">✿</span>
+      <span class="currently-label">working on</span>
+      <span class="currently-val">Platform reliability and developer experience tooling</span>
+    </div>
+    <div class="currently-item">
+      <span class="currently-dot">✿</span>
+      <span class="currently-label">learning</span>
+      <span class="currently-val">Rust, distributed tracing, and CSS radial gradients</span>
+    </div>
+    <div class="currently-item">
+      <span class="currently-dot">✿</span>
+      <span class="currently-label">reading</span>
+      <span class="currently-val">A Philosophy of Software Design — John Ousterhout</span>
+    </div>
+    <div class="currently-item">
+      <span class="currently-dot">✿</span>
+      <span class="currently-label">open to</span>
+      <span class="currently-val">Staff / Principal roles at product-focused companies</span>
+    </div>
+  </div>
+</div>
