@@ -46,3 +46,14 @@
     - Book
     - Leadership
     - Seniority
+
+- title: "Git Cute Podcast"
+  description: "A technical podcast that I started when I was in a position where I needed to find a creative outlet and also wanted to share more knowledge outside of Twitter. It ended up being more successful than I could have realized and was the first paver in the path toward building Git Cute."
+  year: 2018
+  type: Podcast
+  url: https://www.amazon.com/Software-Engineers-Guide-Seniority-Leadership/dp/1484287827
+  show_placeholder: true
+  tags:
+    - Author
+    - Podcast
+    - Software Engineering
