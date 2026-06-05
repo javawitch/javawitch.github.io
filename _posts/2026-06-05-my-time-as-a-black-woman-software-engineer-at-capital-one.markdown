@@ -1,0 +1,78 @@
+---
+layout: post
+title:  "My Time as a Black Woman Software Engineer at Capital One"
+date:   2026-06-05
+tag: capital one
+categories: blog
+---
+_This blog was originally posted on [Medium](https://medium.com/@javavvitch/my-time-as-a-black-woman-software-engineer-at-capital-one-5c05fa8faed), July 6, 2020._ 
+
+
+**Trigger Warning: Mention onf depression, anxiety, PTSD, and suicidal thoughts.** 
+
+
+Being a Black woman in technology, despite the immense amount of privilege that we have with our skill set and our compensation for said skill set, is hard, but I would like to think I have persevered despite the odds. I love my career path. I travel to conferences to talk about my experience technically and also to talk about my experience with diversity and inclusion in the field. Honestly, this article could have been another talk and a hell of a good one. I have also found ways to grow a community of compassionate friends in technology that I did not think was possible. Yet, when it came to my job, I was dimmed.
+<!--more-->
+To anyone that has listened to my podcast, my experience at previous jobs, especially my most recent at a very popular U.S. based bank, was less than stellar. It was abusive and led to me having to go on short-term disability leave and being diagnosed with PTSD before I finally parted ways with the company.
+
+And unlike South Asian Woman and woman of color, I noticed the lack of diversity on my team at the finance company, and the other teams that we were primarily supposed to be working in, right away. I was in a sea of men — South Asian and White Men — and here I was, the lone black woman in a boat with one other South Asian woman engineer. In retrospect, this should have been my red flag to back out, but this was my first time making six-figures. This was a huge deal to me and the sacrifices that my parents made for me to make a better life for myself, so I stayed to my own detriment in every application of the word.
+
+My first manager, who I will call T, I really liked. He listened to me in our 1–1s. He gave me productive, actionable feedback to help find a fit on the team, and if need be elsewhere. The first 1–1 with him where I was starting to receive negative feedback from N was January 24, 2019. It marked 6 months of my time on the job and the landmark of when T originally said that he was supposed to see production out of me. From the notes of the meeting that I too, T told me that he was uncertain about what work I was doing on the team and that I wasn’t getting work done fast enough which would come to be the haunting — and most triggering — piece of feedback during the entirety of my time there.
+
+I told him that I didn’t feel like my voice on the team was heard. That a majority of the work that I was given were hand offs from other members of the team and the work that I put into finishing those tickets weren’t acknowledged. Following that meeting, I wrote in my productivity journal that my feelings about the meeting seemed positive. T was an extremely good software engineer and manager, and I have nothing but the utmost respect for him. I can’t say the same for who would be the person that would replace him as my manager and be the main factor of me leaving the organization.
+
+Once N became my manager, work became truly hellish from me. Not only did I have to deal with our scrum master orchestrating his own issues with me and passing them through my manager, I also had to deal with my manager being a brand new manager, who at the time, had zero managerial training. We received a new team member at the time who was a cis white male, and I was petrified. I thought that it was going to make the team dynamic even worse, but in reality, this new engineer became the person on the team that I was closest to. We could work together on tickets without him making me feel like I was an idiot. There was an obvious change in my disposition and output because my scrum master noted that I was working well with the person and that I should “keep pair programming.” What he was missing was that the new employee treated me like a human, that I knew what I was talking about because clearly I was at the same level he was. He also stood up for me in meetings and made my voice be heard. His short 2 months with the team was the most productive and happiest months that I spent at the company. He moved on because he already knew that the team was not for him.
+
+I should have left with him.
+
+One impromptu meeting I had with my manager happened after a meeting or lunch. He asked me why it was taking so long for me to finish a front end project. I explained to him my reasoning: I had tried one approach that I had asked the front end engineer that worked on the component about, found wasn’t the correct way, went to another former front end engineer that had worked in the code base for help, he gave me direction on it that ended up being a one line implementation solution. He implied that I was lying since he had already talked to the front end engineer of question. I offered to show him the transcript of our Slack conversation if he truly did not believe me, but of course that was never his intention. Again, I was taking too long to complete it, and again, I felt as though I could not talk to anyone for help without him going behind me and questioning about what was talked about.
+
+One day I had the assistant of a higher up reach out to me to schedule a meeting. There were no meetings that I had at the company that ended up good for me, so I went in expecting the worst. It is worth noting that she was a woman of color, which excited me because it was another WOC in that was in an individual contributor role and had worked her way to the top, but I had been fooled before, so I stayed guarded. We grabbed a small room away from my team and closed the door. She asked me how things were going with the team. I responded with my canned “you know, everything is fine” answer, and then she stopped me as if she already knew there was something wrong.
+
+“Tell me the truth. How are you really?”
+
+I broke down repeating my plights between sobs like a broken record except this time I didn’t feel like it was falling on ears that weren’t listening. To put it plainly, she was horrified. She said that this isn’t what the experience was supposed to be like on the team. She told me of ways to take charge of the stories that I wanted to work on, be bold and take initiative, and I did take the advice. She offered to be a mentor of sorts to me to help navigate this, and to her, I still thank her and think of no ill will toward her. It did made me think, however, that I have gotten through the higher ups as a problem child?
+
+Did someone let them know my manager was, in fact, the problem?
+
+Soon after that, I took her advice and pushed for a series of stories for migrating a large swath of jobs from one Jenkins server to another. The hard part was that it had removed a couple of essential plugins that were security risks, so a lot of it was spent talking to other employees that were dealing with the same thing, a lot of Ruby scripting, and a lot of going back and forth with our dedicated DevOps team. I enjoyed it! I felt like I had finally found something that was leaving me challenged and no one was questioning me because I was finally the one with the most knowledge about the platform. (Even though my manager chastised me for deploying a job through traditional Jenkins pathways instead of through an installed GUI, but … whatever.) I felt really good about my position with the team with this and the fact that I got a ‘Strong’ on my mid-term review (My manager did not hesitate to tell me that I barely got a strong, but, again, whatever.) when I decided to go on vacation to recharge.
+
+After I got back from my 2 week vacation, I was given an improvement plan — not to be confused with the elusive P.I.P. (That’s to come later) This was shocking to me since before I left I was given a passing mark on my mid-year review. With my manager putting it to me as an arrangement just between me and him to set myself up for success, I accepted it, and tried my hardest to stick to what was detailed in it. Even though he included a snapshot of my GitHub activity, when I had been working solely on a pipeline migration for 3 months straight that did not need any code pushes, only scripting done within the Jenkins jobs itself. I did not want to keep being the reason why team morale was low. I did not want to put the additional burden on my team. Regardless of the large jobs that I took on and finished. Regardless of me being the team’s ticket janitor. I wanted to prove to my manager and teammates that I was a good software engineer, and that I deserved to be there.
+
+What I didn’t know was that my depression and anxiety were not going to let me do that.
+
+It went well for a couple of weeks, but I quickly slipped into a depression due to the weekly “feedback”. I stopped going into the office every day. I would work from home 3–4 days out of the week, and if I could absolutely push it, 5 days a week. I did not want to go into the office and have to be in the strategic seat that my manager picked out for me to sit between him and the other senior most engineer on the team so they could babysit my computer screen. If I was at my desk. If I decided to take a break or not. If I was talking too much in our corporate Slack. I was heavily monitored in a way that no one else on my team was, but my manager and by my scrum master at the time. It was oppressive and exhausting to go to work every single day to be monitored as if I was a child.
+
+By October, I couldn’t even turn over in my bed to open my laptop to sign on for meetings. I was tired of pretending and tired of living. It was the realization in mid-December that I was having suicidal thoughts multiple times a day that I decided to go to my primary physician looking for help. The doctor’s office was in our office building, and just scanning my badge to get into the building gave me the shakes. By the time they got me back into the examination room, I was on the brink of tears. My doctor, who is the woman that saved my life and I do believe that she knows that, only had to ask me, “Are you okay?”
+
+The sobbing started. The shaking. Telling her of how hard work had been.
+
+How was I on the brink of losing my job because I just couldn’t do it anymore?
+
+I couldn’t retain information from reading or audio anymore.
+
+I couldn’t remember what I had typed 2 seconds ago.
+
+I couldn’t prove to my manager that I was smart and that I belonged in that position if I couldn’t even remember what we had talked about 5 minutes prior.
+
+My doctor was calm, cool, and collected while I unraveled. After I had finished, she suggested that I go on short-term disability. I was shocked for two reasons:
+
+I had come in for possible medicine for my anxiety attacks and to just be able to work again.
+She thought that I was that bad off?
+I trusted her judgement, so I called HR to get the process started and the paperwork to take back to my doctor. I was approved for 6 weeks of short term disability where I wasn’t allowed to do anything but talk to my therapist and take my new anxiety and depression medication.
+
+I came back to the job 2 weeks into January 2020 and just a week after I came back to the job, I was met with a formal presentation of my P.I.P. I was shocked that I was receiving one so soon after I had come back from my short term disability leave. I thought that I would have some time to acclimate and understand what the team was working on, if our team product road map had changed, before being told that more-or-less my medical condition does not matter.
+
+Now, I did have the choice to take the P.I.P. and try to work on fixing it, or leaving, taking my severance pay and never having to deal with it again. I’m sure you are asking yourself why I didn’t do that. Imagine becoming unemployed when your SNRI is still being adjusted by your doctor and your body is still dealing with that. I wanted to pick the path that was the less stressful for me, and dealing with the plainly bulleted P.I.P. which was just my personal plan from September with updates dates.
+
+I reached out to the network of friends that I had made at the company through the corporate Slack and various business groups. A close friend to this day gave me the contact of someone in recruiting that I could talk to and confide in. As a black man, he was horrified that my experience was this poorly. He bluntly stated that this did not happen, that my location was a misnomer. He gave me his personal cell phone to call at any time and to make a game plan with how we were going to beat the P.I.P. together. It was refreshing because it was the first time that I felt truly heard by someone in the company in almost 2 years. It saddens me that our first conversation was the only one we had because I mentally checked out once again soon after that.
+
+It wasn’t long after that I was at home, working after hours to try to get some leeway on a ticket because I didn’t want them to think I was taking too long at my tasks again. I was 5 minutes into it when I started experiencing a panic attack. After 10 minutes, it will full blown. I debated calling the ambulance because it felt like my sternum had cracked and was possibly having a heart attack. The next day, I went to my doctor to explain what had happened. She confirmed that it wasn’t a heart attack, but based on what I was doing when it occurred, it’s highly likely that I had PTSD, and she adjusted my dosage of medicine. I brought this up with my therapist who echoed her concerns. Now I was dealing with possibly not being able to perform in my career because of this. It was time to get serious about making moves to leave.
+
+I was let go from the company for failing my P.I.P. May 5th, 2020. I practically stopped signing on for weeks once again. I signed on to check in on Slack but most of the time I was spending my time in a Slack channel lamenting about my situation. Receiving that email from my manager and his was like a huge weight lifting off of my shoulders. I could finally be free of the anxiety and turmoil that being his employee was causing me. I had never signed a severance letter as fast as I did when HR emailed me.
+
+In hindsight, I keep thinking of all of the things that I could have done to not be harassed while I was still employed as a software engineer there, but this is only partly my fault. My manager shouldn’t have berated me and veiled it as him caring about me and my success when he was worried about HIS success. My team should have done more to make me feel like my opinions on technical things mattered. My company shouldn’t have failed to protect me from the discrimination. Let it be known that there was so much more that happened while I was there for my 22 months that I can’t confront and process again. My experience there was rife with racial microaggressions and sexist discrimination.
+
+To the employees that still work there and still benefit from your privilege and still sit idly by watching this happen to your coworkers, congratulations, but with your complacency and silence, you let me, and others like me, fall to the wayside.
+
+Never again.
