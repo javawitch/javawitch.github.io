@@ -7,10 +7,11 @@ categories: blog
 ---
 _This blog was originally posted on [Medium](https://medium.com/@javavvitch/my-time-as-a-black-woman-software-engineer-at-capital-one-5c05fa8faed), July 6, 2020._ 
 
-**Trigger Warning: Mention onf depression, anxiety, PTSD, and suicidal thoughts.** 
-
 Being a Black woman in technology, despite the immense amount of privilege that we have with our skill set and our compensation for said skill set, is hard, but I would like to think I have persevered despite the odds. I love my career path. I travel to conferences to talk about my experience technically and also to talk about my experience with diversity and inclusion in the field. Honestly, this article could have been another talk and a hell of a good one. I have also found ways to grow a community of compassionate friends in technology that I did not think was possible. Yet, when it came to my job, I was dimmed.
 <!--more-->
+
+**Trigger Warning: Mention onf depression, anxiety, PTSD, and suicidal thoughts.** 
+
 To anyone that has listened to my podcast, my experience at previous jobs, especially my most recent at a very popular U.S. based bank, was less than stellar. It was abusive and led to me having to go on short-term disability leave and being diagnosed with PTSD before I finally parted ways with the company.
 
 And unlike South Asian Woman and woman of color, I noticed the lack of diversity on my team at the finance company, and the other teams that we were primarily supposed to be working in, right away. I was in a sea of men — South Asian and White Men — and here I was, the lone black woman in a boat with one other South Asian woman engineer. In retrospect, this should have been my red flag to back out, but this was my first time making six-figures. This was a huge deal to me and the sacrifices that my parents made for me to make a better life for myself, so I stayed to my own detriment in every application of the word.
