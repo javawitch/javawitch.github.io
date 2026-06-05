@@ -1,0 +1,33 @@
+# ── _data/talks.yml ─────────────────────────────────────────
+# Add your conference talks here.
+#
+# Fields:
+#   title:       required
+#   event:       conference name
+#   date:        e.g. Mar 2025
+#   description: one or two sentences
+#   keynote:     true = featured badge + pink border
+#   slides:      URL to slides
+#   video:       URL to recording
+#   abstract:    URL to abstract or event page
+
+- title: "The Hidden Cost of Fast: How Performance Culture Breaks Teams"
+  event: QCon London
+  date: Mar 2025
+  description: "On the tension between shipping fast and building sustainably — and what staff engineers can do about it."
+  keynote: true
+  slides: https://slides.example.com/hidden-cost-of-fast
+  video: https://video.example.com/hidden-cost-of-fast
+
+- title: "API Design as a Team Sport"
+  event: StrangeLoop
+  date: Oct 2024
+  description: "How cross-functional API design reviews improved consistency and cut integration bugs by 60% across our platform."
+  slides: https://slides.example.com/api-design-team-sport
+
+- title: "Writing the RFC Nobody Ignores"
+  event: LeadDev
+  date: Jun 2024
+  description: "Practical frameworks for technical writing that gets read, discussed, and actually shapes decisions."
+  slides: https://slides.example.com/rfc-nobody-ignores
+  video: https://video.example.com/rfc-nobody-ignores

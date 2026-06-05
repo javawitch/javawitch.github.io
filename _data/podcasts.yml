@@ -1,0 +1,36 @@
+# ── _data/podcasts.yml ──────────────────────────────────────
+# Add your podcast appearances here.
+#
+# Fields:
+#   title:       episode title
+#   show:        podcast name
+#   date:        e.g. Apr 2025
+#   description: one or two sentences about the episode
+#   url:         link to the episode
+#   image:       path to show artwork e.g. /assets/img/podcast-name.jpg
+#   emoji:       fallback if no image (default: 🎙)
+#   color:       background color for artwork placeholder
+
+- title: "On Staff Engineering and Knowing When to Code"
+  show: Software Unscripted
+  date: Apr 2025
+  description: "A conversation about how staff+ engineers balance hands-on work with technical leadership and influence."
+  url: https://podcast.example.com/software-unscripted-ep
+  emoji: "🎙"
+  color: "#fce8ef"
+
+- title: "Platform Engineering in the Age of AI"
+  show: The Changelog
+  date: Jan 2025
+  description: "What changes — and what doesn't — when AI starts generating the code your platform has to run."
+  url: https://changelog.fm/example
+  emoji: "🎧"
+  color: "#e8f2fa"
+
+- title: "Career Ladders, Sponsorship, and Getting to Staff"
+  show: Ladybug Podcast
+  date: Aug 2024
+  description: "Practical advice on navigating the senior → staff transition, finding sponsors, and building visibility."
+  url: https://ladybug.dev/example
+  emoji: "✦"
+  color: "#fffae0"
