@@ -12,44 +12,25 @@
 #   featured:         true = pink left border accent
 #   tags:             list of tech/skill tags
 
-- title: "Redesigning onboarding for 40k users"
-  description: "Led end-to-end redesign of a fintech onboarding experience — cut drop-off by 34% through progressive disclosure and contextual microcopy."
-  year: 2025
-  type: Case Study
-  url: /projects/onboarding-redesign/
-  image: /assets/img/onboarding.jpg
-  featured: true
-  tags:
-    - UX
-    - Research
-    - React
-
-- title: "Petal — a lightweight Jekyll theme"
-  description: "Built this site's theme from scratch. Pure CSS patterns, no images, dark mode, cherry blossom borders."
+- title: "Witch Gems VSCode Theme"
+  description: "A VSCode theme that were inspired by the colors that I used for Git Cute Podcast's logo at the time. I wanted to create a theme that that was dark and cute and carried over my love for witchy aesthetics into my coding environment. The theme is open source and is available on VSCode marketplace with over 2k installs."
   year: 2025
   type: Open Source
-  url: https://github.com/javawitch/petal-theme
+  url: https://github.com/javawitch/witchgems-theme
+ # image: /assets/img/witchgems.png
+  featured: true
+  tags:
+    - Design
+    - VSCode
+
+- title: "Petal — a lightweight Jekyll theme"
+  description: "Design inspiration came from Frieren's favorite spell and Ariana Grande's upcoming album. Built this site's theme from scratch when I couldn't find any themes that were lightweight enough for Github Pages and gave me the customization for a portfolio. Requirements: No heavy frameworks, meaning pure CSS, JS, light/dark mode toggle, and no unnecessary images to stay within Github Pages constraints."
+  year: 2026
+  type: Open Source
+  url: https://github.com/javawitch/javawitch.github.io
   show_placeholder: true
   tags:
     - Jekyll
     - SCSS
     - CSS
-
-- title: "Pen Pal Bot — letters from fictional friends"
-  description: "A small web app that sends handwritten-style letters from AI pen pals with distinct personalities and backstories."
-  year: 2024
-  type: Side Project
-  url: /projects/pen-pal-bot/
-  tags:
-    - Node.js
-    - AI
-    - Handlebars
-
-- title: "Building a design system for a Series B startup"
-  description: "Architected a token-based design system from scratch, shipped to 6 product teams across 3 time zones."
-  year: 2024
-  type: Case Study
-  tags:
-    - Design Systems
-    - Figma
-    - Tokens
+    - JS
