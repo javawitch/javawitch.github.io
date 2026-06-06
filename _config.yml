@@ -50,6 +50,7 @@ compress_html:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Implictly adding Sass here. **MUST USE @IMPORT BECAUSE OF GITHUB PAGES**
 sass:
