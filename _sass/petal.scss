@@ -1190,6 +1190,10 @@ a:hover { text-decoration-thickness: 2.5px; }
 @media (max-width: 600px) {
   :root { --strip-w: 14px; }
 
+  .site-wrapper {
+    flex-direction: row;  // ensure strips stay on sides not stacked
+  }
+
   .site-header {
     flex-direction: column;
     gap: 0.75rem;
@@ -1199,6 +1203,8 @@ a:hover { text-decoration-thickness: 2.5px; }
   .site-nav-wrap {
     flex-wrap: wrap;
     gap: 0.25rem;
+    width: 100%;
+    justify-content: right;  // pushes toggle to the right
   }
 
   .site-nav {
@@ -1207,7 +1213,9 @@ a:hover { text-decoration-thickness: 2.5px; }
 
   .nav-divider { display: none; }
 
-  .theme-toggle { margin-bottom: 0.4rem; }
+  .theme-toggle { margin-bottom: 0.4rem; 
+  justify-content: right;
+ }
 
   .post-list-item {
     flex-direction: column;
