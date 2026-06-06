@@ -1,0 +1,149 @@
+---
+layout: default
+title: Consulting
+accepting: true
+---
+
+<div class="consult-hero">
+  <h1 class="consult-title">Let's work<br>together.</h1>
+  <p class="consult-sub">I offer fractional engineering leadership and consulting for startups and scaling teams who need senior technical perspective without the full-time commitment.</p>
+
+  {% if page.accepting %}
+  <div class="avail-banner avail-banner--open">
+    <p class="avail-banner-text">
+      <span class="avail-dot-green"></span>
+      Currently accepting new clients for Q3 2026 — limited availability.
+    </p>
+    <a class="avail-cta" href="mailto:{{ site.email | default: 'hello@jocelyn.dev' }}">Get in touch →</a>
+  </div>
+  {% else %}
+  <div class="avail-banner avail-banner--closed">
+    <p class="avail-banner-text">
+      <span class="avail-dot-closed"></span>
+      Not currently accepting new clients — check back soon or get on the waitlist.
+    </p>
+    <a class="avail-cta avail-cta--closed" href="mailto:{{ site.email | default: 'hello@jocelyn.dev' }}">Join waitlist →</a>
+  </div>
+  {% endif %}
+</div>
+
+<div class="consult-section">
+  <div class="section-head"><h2>What I do</h2><div class="section-line"></div></div>
+  <div class="services-grid">
+    <div class="service-card">
+      <p class="service-label">Fractional</p>
+      <p class="service-title">Head of Engineering Ops</p>
+      <p class="service-desc">Embedded part-time leadership for teams without a dedicated EM or VP. Delivery ops, hiring, roadmap alignment, and cross-functional communication.</p>
+    </div>
+    <div class="service-card service-card--blue">
+      <p class="service-label">Advisory</p>
+      <p class="service-title">Technical Architecture Review</p>
+      <p class="service-desc">Audit your system design, API contracts, and infra decisions. Get a written report with prioritized, actionable recommendations.</p>
+    </div>
+    <div class="service-card service-card--blue">
+      <p class="service-label">Coaching</p>
+      <p class="service-title">Staff+ Engineer Coaching</p>
+      <p class="service-desc">1:1 coaching for senior engineers navigating the path to staff or principal. Career strategy, influence, technical leadership, and visibility.</p>
+    </div>
+    <div class="service-card service-card--yellow">
+      <p class="service-label">Workshop</p>
+      <p class="service-title">Engineering Culture & Process</p>
+      <p class="service-desc">Half or full-day workshops on RFC culture, incident retrospectives, and building psychologically safe, high-performing teams.</p>
+    </div>
+  </div>
+</div>
+
+<div class="consult-section">
+  <div class="section-head"><h2>How it works</h2><div class="section-line"></div></div>
+  <div class="process-list">
+    <div class="process-item">
+      <span class="process-num">1</span>
+      <div class="process-text">
+        <h3>Intro call</h3>
+        <p>30 minutes, no commitment. We talk through your situation and I'll tell you honestly whether I can help.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <span class="process-num">2</span>
+      <div class="process-text">
+        <h3>Proposal</h3>
+        <p>I send a scoped proposal with timeline, deliverables, and rate. Flat project fees where possible.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <span class="process-num">3</span>
+      <div class="process-text">
+        <h3>Engagement</h3>
+        <p>We work together. Weekly check-ins, async comms, written deliverables. You own everything I produce.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="consult-section">
+  <div class="section-head"><h2>Rates</h2><div class="section-line"></div></div>
+  <div class="rates-list">
+    <div class="rate-item">
+      <div class="rate-info">
+        <p class="rate-name">Fractional Head of Engineering Ops</p>
+        <p class="rate-detail">8–16 hrs/week, 3 month minimum</p>
+      </div>
+      <div class="rate-price-wrap">
+        <p class="rate-price">Custom</p>
+        <span class="rate-note">Let's talk scope</span>
+      </div>
+    </div>
+    <div class="rate-item">
+      <div class="rate-info">
+        <p class="rate-name">Architecture Review</p>
+        <p class="rate-detail">Written report + 1hr debrief call</p>
+      </div>
+      <div class="rate-price-wrap">
+        <p class="rate-price">$2,500</p>
+        <span class="rate-note">flat fee</span>
+      </div>
+    </div>
+    <div class="rate-item">
+      <div class="rate-info">
+        <p class="rate-name">Staff+ Coaching</p>
+        <p class="rate-detail">4 sessions / month</p>
+      </div>
+      <div class="rate-price-wrap">
+        <p class="rate-price">$800</p>
+        <span class="rate-note">per month</span>
+      </div>
+    </div>
+    <div class="rate-item">
+      <div class="rate-info">
+        <p class="rate-name">Workshop</p>
+        <p class="rate-detail">Half or full day, up to 20 people</p>
+      </div>
+      <div class="rate-price-wrap">
+        <p class="rate-price">$3,500+</p>
+        <span class="rate-note">travel extra</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="consult-section">
+  <div class="section-head"><h2>Kind words</h2><div class="section-line"></div></div>
+  <div class="testimonial-list">
+    <blockquote class="testimonial">
+      <p class="testimonial-quote">"Jocelyn helped us go from shipping chaos to a system our whole team trusted. She didn't just fix our process — she taught us how to own it."</p>
+      <footer class="testimonial-attr">— CTO, early-stage fintech startup</footer>
+    </blockquote>
+    <blockquote class="testimonial">
+      <p class="testimonial-quote">"The architecture review was worth every penny. The report was clear, actionable, and saved us months of going in the wrong direction."</p>
+      <footer class="testimonial-attr">— VP Engineering, Series B SaaS</footer>
+    </blockquote>
+  </div>
+</div>
+
+<div class="cta-block">
+  <h3 class="cta-title">Ready to work together?</h3>
+  <p class="cta-sub">Send me a note with a bit about your team and what you're working through. I'll get back to you within 2 business days.</p>
+  <a class="cta-btn" href="mailto:{{ site.email | default: 'hello@jocelyn.dev' }}">
+    <span>✿</span> Get in touch
+  </a>
+</div>
